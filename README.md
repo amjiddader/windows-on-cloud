@@ -57,7 +57,7 @@ Password: P@ssword64
 Downloads
 ```
 https://archive.org/download/windows11-tiny11-cloudvm/win10_en.gz 
-Mirror: https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10_en.gz
+https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10_en.gz
 ```
 ------------------------
 ## Installation
