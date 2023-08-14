@@ -1,4 +1,4 @@
-![PROFILE HITS](https://komarev.com/ghpvc/?username=amjiddader&style=flat-square)    ![Visitors](https://api.visitorbadge.io/api/visitors?path=amjiddader%2Fwindows-on-cloud&label=VISITORS&labelColor=%232ccce4&countColor=%23f47373&style=flat&labelStyle=upper)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=amjiddader%2Fwindows-on-cloud&label=VISITORS&labelColor=%232ccce4&countColor=%23f47373&style=flat&labelStyle=upper)
 
 
 
