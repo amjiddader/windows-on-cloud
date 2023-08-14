@@ -20,12 +20,12 @@ For more: create an issue at github :
 
 ## Getting Started... 
 I have tried on multiple provider all of them are good. \
-**UpCloud***is very good in terms of bandwidith and Internet Spped of server* \
+**UpCloud** *is very good in terms of bandwidith and Internet Spped of server* \
 [Get UPCLOUD 75$](https://upcloud.com/signup/?promo=EE875F) \
-**DigitalOcean***is cheap and has lot ok options to go with But network is very slow.* \
+**DigitalOcean** *is cheap and has lot ok options to go with But network is very slow.* \
 Use my referal link to get 200$ on digitalocean \
 [GET 200$](https://m.do.co/c/f5028642478c) \
-**VULTR***Is also good if you are looking for more locations to spin your server.* \
+**VULTR** *Is also good if you are looking for more locations to spin your server.* \
 But vultr servers and network is not that good.
 
 :: Using my referral link for Digitalocean will give 100$ credits and i iwll get 25$. \
