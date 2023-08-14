@@ -45,8 +45,9 @@ Download Links
 ```
 https://archive.org/download/windows11-tiny11-cloudvm/win11
 https://master.dl.sourceforge.net/project/windows-on-cloud/win11?viasf=1
-https://www.multiup.org/en/mirror/12ca28b33f010c41889b8fd8b715d1e9/win11
 ```
+MIRROR: https://www.multiup.org/en/mirror/12ca28b33f010c41889b8fd8b715d1e9/win11
+
 Tested on : Digitalocean : 4GB ram and is not smooth..
 
 ==========
@@ -69,8 +70,8 @@ Downloads
 ```
 https://archive.org/download/windows11-tiny11-cloudvm/win_11.gz
 https://master.dl.sourceforge.net/project/windows-on-cloud/win_11.gz?viasf=1
-https://www.multiup.org/en/mirror/f55f3a6957d984fe3811cc39d0e701e2/win_11.gz
 ```
+MIRROR: https://www.multiup.org/en/mirror/f55f3a6957d984fe3811cc39d0e701e2/win_11.gz
 
 Tested on: Digitalocean Regular 4Gb - 2CPU -- it uses very less RAM and runs very smooth.
 
@@ -86,8 +87,9 @@ Downloads
 ```
 https://archive.org/download/windows11-tiny11-cloudvm/win10_en.gz
 https://master.dl.sourceforge.net/project/windows-on-cloud/win10_en.gz?viasf=1
-https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10_en.gz
 ```
+MIRROR: https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10_en.gz
+
 ------------------------
 ## Installation
 ```
