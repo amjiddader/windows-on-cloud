@@ -1,3 +1,6 @@
+![Visitor Count](https://img.shields.io/github/watchers/amjiddader/windows-on-cloud.svg?style=social)
+
+
 # Windows on Cloud.
 
 Install Windows on any Cloud VM including Digitalocean , vultr... \
