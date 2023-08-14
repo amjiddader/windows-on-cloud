@@ -3,24 +3,24 @@
 Install Windows on any Cloud VM including Digitalocean , vultr... \
 3 files are included with different versions and size. choose one based on your needs.
 
-I recommend not to install on windows on VM / \
+I recommend not to install on windows on VM  \
 Get a windows instance from valid provider. \
-\
 Use my referral to get 200$ on digitalocean ( i will get 30)\
-You can get free 200$ VPS\
-\
+You can get free 200$ VPS
 
 ---------------------------------------------------------------
 # 1. WIN11
-This one is pure windows 11 default windows settings and apps. \
+This one is pure windows 11 default windows settings and apps.
 ```
 Username: Administrator
 Password: Thuonghai001
 ```
-
-Download: https://archive.org/download/windows11-tiny11-cloudvm/win11 \
-Mirror: https://www.multiup.org/en/mirror/12ca28b33f010c41889b8fd8b715d1e9/win11	\
-Tested on : Digitalocean : 4GB ram and is not smooth.. \
+Download Links
+```
+https://archive.org/download/windows11-tiny11-cloudvm/win11 
+https://www.multiup.org/en/mirror/12ca28b33f010c41889b8fd8b715d1e9/win11
+```
+Tested on : Digitalocean : 4GB ram and is not smooth..
 
 ==========
 
@@ -38,9 +38,11 @@ Username : Amjid
 Password: amjiddader
 ```
 
-Download: https://archive.org/download/windows11-tiny11-cloudvm/win_11.gz 
-
-Mirror: https://www.multiup.org/en/mirror/f55f3a6957d984fe3811cc39d0e701e2/win_11.gz 
+Downloads
+```
+https://archive.org/download/windows11-tiny11-cloudvm/win_11.gz 
+https://www.multiup.org/en/mirror/f55f3a6957d984fe3811cc39d0e701e2/win_11.gz
+```
 
 Tested on: Digitalocean Regular 4Gb - 2CPU -- it uses very less RAM and runs very smooth.
 
@@ -52,10 +54,13 @@ Username : Administrator
 Password: P@ssword64
 ```
 
-Download: https://archive.org/download/windows11-tiny11-cloudvm/win10_en.gz \
+Downloads
+```
+https://archive.org/download/windows11-tiny11-cloudvm/win10_en.gz 
 Mirror: https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10_en.gz
-
+```
 ------------------------
+## Installation
 ```
 Installation :
 wget O url | gunzip | dd of=/dev/vda bs=1M
