@@ -1,4 +1,4 @@
-![Visitor Count](https://img.shields.io/github/watchers/amjiddader/windows-on-cloud.svg?style=social)
+![Profile Views](https://github-readme-stats.vercel.app/api?username=amjiddader&show_icons=true&count_private=true&include_all_commits=true&custom_title=Profile%20Views)
 
 
 # Windows on Cloud.
