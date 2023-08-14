@@ -13,11 +13,12 @@ You can get free 200$ VPS\
 ---------------------------------------------------------------
 # 1. WIN11
 This one is pure windows 11 default windows settings and apps. \
+```
+Username: Administrator
+Password: Thuonghai001
+```
 
-Username: Administrator\
-Password: Thuonghai001\
-
-Download: https://archive.org/download/windows11-tiny11-cloudvm/win11\
+Download: https://archive.org/download/windows11-tiny11-cloudvm/win11 \
 Mirror: https://www.multiup.org/en/mirror/12ca28b33f010c41889b8fd8b715d1e9/win11	\
 Tested on : Digitalocean : 4GB ram and is not smooth.. \
 
@@ -32,25 +33,27 @@ This version is extreamly debolted and removed all microsoft apps.\
 - Installed Brave Browser\
 - Uninstalled all windows app\ 
 - Uninstalled Edge and other win Softwares\
+```
+Username : Amjid 
+Password: amjiddader
+```
 
-Username : Amjid \
-Password: amjiddader\ 
+Download: https://archive.org/download/windows11-tiny11-cloudvm/win_11.gz 
 
-Download: https://archive.org/download/windows11-tiny11-cloudvm/win_11.gz\
-Mirror: https://www.multiup.org/en/mirror/f55f3a6957d984fe3811cc39d0e701e2/win_11.gz\
+Mirror: https://www.multiup.org/en/mirror/f55f3a6957d984fe3811cc39d0e701e2/win_11.gz 
 
-Tested on: Digitalocean Regular 4Gb - 2CPU -- it uses very less RAM and runs very smooth.\
+Tested on: Digitalocean Regular 4Gb - 2CPU -- it uses very less RAM and runs very smooth.
 
 ==========
 # 3. Windows 10 ( bonus)
 This is just a copy of whatuptime ... credits to them.\
+```
+Username : Administrator
+Password: P@ssword64
+```
 
-Username : Administrator\
-Password: P@ssword64 \
-
-Download: https://archive.org/download/windows11-tiny11-cloudvm/win10_en.gz\
-Mirror: https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10_en.gz\
-
+Download: https://archive.org/download/windows11-tiny11-cloudvm/win10_en.gz \
+Mirror: https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10_en.gz
 
 ------------------------
 ```
