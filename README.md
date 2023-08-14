@@ -1,4 +1,4 @@
-![](https://komarev.com/ghpvc/?amjiddader=your-github-username&label=VIEWS)
+![](https://komarev.com/ghpvc/?username=amjiddader&label=VIEWS)
 
 
 # Windows on Cloud.
