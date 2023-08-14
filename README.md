@@ -1,4 +1,4 @@
-![Profile Views](https://github-readme-stats.vercel.app/api?username=amjiddader&show_icons=true&count_private=true&include_all_commits=true&custom_title=Profile%20Views)
+![](https://komarev.com/ghpvc/?amjiddader=your-github-username&label=VIEWS)
 
 
 # Windows on Cloud.
