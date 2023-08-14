@@ -8,7 +8,9 @@
 Install Windows on any Cloud VM including Digitalocean , vultr... \
 3 files are included with different versions and size. choose one based on your needs.
 
-:: THIS CODE IS HOSTED ON [GITHUB](https://github.com/amjiddader/windows-on-cloud) - SOURCEFORGE  \
+:: THIS CODE IS HOSTED ON [GITHUB](https://github.com/amjiddader/windows-on-cloud) - [SOURCEFORGE](https://sourceforge.net/projects/windows-on-cloud/)  \
+
+
 :: FILES ARE HOSTED ON MULTIPLE PROVIDERS - \
 :: FOR DMCA or REMOVAL CONTACT RESPECTIVE PROVIDER.. \
 
