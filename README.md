@@ -1,4 +1,4 @@
-![VIEWS](https://komarev.com/ghpvc/?username=amjiddader&style=flat-square)
+![PROFILE HITS](https://komarev.com/ghpvc/?username=amjiddader&style=flat-square)    ![REPO VIEWS](https://visitor-badge.glitch.me/badge?page_id=amjiddader.windows-on-cloud&left_color=green&right_color=red)
 
 
 # Windows on Cloud.
