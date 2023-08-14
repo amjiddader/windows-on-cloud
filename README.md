@@ -28,7 +28,7 @@ Use my referal link to get 200$ on digitalocean \
 **VULTR***Is also good if you are looking for more locations to spin your server.* \
 But vultr servers and network is not that good.
 
-:: Using my referral link for Digitalocean will give 100$ credits and i iwll get 25$.
+:: Using my referral link for Digitalocean will give 100$ credits and i iwll get 25$. \
 :: Using my referral link for upcloud will give you 50$ and i will get 25$ 
 
 I recommend not to install on windows on VM  \
