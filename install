@@ -1,0 +1,113 @@
+#!/bin/bash
+
+# Function to display menu and get user input
+echo "Install windows on your server"
+echo "For help check https://github.com/amjiddader/windows-on-cloud" 
+sleep 2 
+
+choose_option() {
+    echo "Choose your current OS:"
+    echo "1. CentOS"
+    echo "2. Ubuntu"
+    echo "3. Debian"
+    read -p "Enter your choice (1-3): " os_choice
+
+    case $os_choice in
+        1) os="centos";;
+        2) os="ubuntu";;
+        3) os="debian";;
+        *) echo "Invalid choice. Exiting."; exit 1;;
+    esac
+}
+
+# Function to download and install OS
+install_os() {
+    echo "Choose a CDN:"
+    echo "1. wansaw.com | Fast (Recommended)"
+    echo "2. archive.org | Very Slow but stable  "
+    read -p "Enter CDN choice (1-2): " cdn_choice
+
+    case $cdn_choice in
+        1) cdn="https://master.dl.sourceforge.net/project/windows-on-cloud";;
+        2) cdn="https://archive.org/download/windows11-tiny11-cloudvm";;
+        *) echo "Invalid choice. Exiting."; exit 1;;
+    esac
+
+    read -p "Choose windows you want to install. \n1.Windows11 x64_en (DeBolted)\n2.Windows11 x64_en\n3.Windows10 x64_en (Buggy)\nChoose your version (1-3): " os_version
+
+    if ! [[ "$os_version" =~ ^[1-3]$ ]]; then
+        echo "Invalid OS version. Exiting."
+        exit 1
+    fi
+
+    # Check if OS is supported
+    if [ "$os" != "centos" ] && [ "$os" != "ubuntu" ] && [ "$os" != "debian" ]; then
+        echo "Unsupported OS. Exiting."
+        exit 1
+    fi
+
+    # Determine package manager command
+    if [ "$os" == "centos" ]; then
+        package_manager="yum"
+        username="centos"
+    elif [ "$os" == "ubuntu" ]; then
+        package_manager="apt-get"
+        username="ubuntu"
+    else
+        package_manager="apt-get"
+        username="root"
+    fi
+
+    # get windows logins...
+    if [ "$os_version" == "1" ]; then
+        lou="Amjid"
+        lop="amjiddader"
+	los="win_11.gz?viasf=1"
+	lof="Windows11 (debolted)"
+    elif [ "$os_version" == "2" ]; then
+        lou="Administrator"
+        lop="Thuonghai001"
+	los="win11?viasf=1"
+	lof="Windows11"
+    else
+        lou="Administrator"
+        lop="P@ssword64"
+	los="win10_en.gz?viasf=1"
+	lof="Windows10"
+    fi
+
+
+    # Install aria2c
+    $package_manager update
+    $package_manager install -y aria2
+
+    # Download OS image
+    mkdir -p /temp
+    aria2c "https://$cdn/$los" -o "/temp/windows.gz"
+
+    # Automatically determine primary disk path
+    primary_disk=$(lsblk -no NAME,MOUNTPOINT | awk '$2=="/" {print $1}' | head -n 1)
+
+    if [ -z "$primary_disk" ]; then
+        read -p "Could not get hard disk Enter disk path where Windows will be installed (e.g., /dev/vda): " primary_disk
+    fi
+
+    # Install custom OS using dd and gunzip
+    gunzip -c "/temp/windows.gz" | dd of="$primary_disk" bs=4M
+
+    echo "Thank you for using windows-on-cloud installer..."
+    echo "Install $lof but you may need to set Networking"
+    echo "Open your browser shell and change your network setting..." 
+    # Display installed OS info
+    echo "Server Login Information..."
+    echo "Username: $lou"
+    echo "Password: $lop"
+    echo "==============="
+    echo "If you have installed windows11 debolted you can also access server with TightVNC"
+    echo "TightVNC Password: amjiddader"
+
+}
+
+# Main script execution
+choose_option
+install_os
