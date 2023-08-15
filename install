@@ -82,6 +82,7 @@ install_os() {
     #gunzip -c "/temp/windows.gz" | dd of="$primary_disk" bs=4M
     
     #aria2c --file-allocation=none --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
+    #curl -L --retry 5 --speed-time 10 -C --parallel-max 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
     wget -O- "https://$cdn/$los" | dd of="$primary_disk" bs=4M
 
     echo "Thank you for using the windows-on-cloud installer..."
