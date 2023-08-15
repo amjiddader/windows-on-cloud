@@ -16,8 +16,8 @@ install_os() {
     read -p "Enter CDN choice (1-2): " cdn_choice
 
     case $cdn_choice in
-        1) cdn="https://master.dl.sourceforge.net/project/windows-on-cloud";;
-        2) cdn="https://archive.org/download/windows11-tiny11-cloudvm";;
+        1) cdn="master.dl.sourceforge.net/project/windows-on-cloud";;
+        2) cdn="archive.org/download/windows11-tiny11-cloudvm";;
         *) echo "Invalid choice. Exiting."; exit 1;;
     esac
 
