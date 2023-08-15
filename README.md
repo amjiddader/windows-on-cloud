@@ -21,7 +21,7 @@ You can now use below command to auto install Windows.
 - Check your install by running..  df -h
 - It will give you list of disks (example: /dev/vda)
 - In shell choose Intractive mode or press 6 - On some hosts it may differ..
-
+ 
 ``` curl -o install.sh -fsSL https://github.com/amjiddader/windows-on-cloud/raw/main/install  && bash install.sh ```
 
 - Once Windows is installed - Boot from Disk and access RDP using browser consol.
