@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Only ubuntu is supported for now..." 
+echo "Only ubuntu is supported for now..."  
 
 # Function to download and install OS
 install_os() {
