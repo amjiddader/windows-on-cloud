@@ -2,9 +2,11 @@
 
 # Check for Ubuntu
 if [ "$os" != "ubuntu" ]; then
-    echo "==================================="
-    echo "Only Ubuntu is supported for now, I will still try"
-    echo "==================================="
+    echo "=============================================="
+    echo "Windows on Cloud Installed by @amjiddader"
+    echo "For help create issue on below github repo."
+    echo "https://github.com/amjiddader/windows-on-cloud"
+    echo "==============================================="
    # exit 1
 fi
 
