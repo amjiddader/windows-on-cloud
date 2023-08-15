@@ -16,14 +16,14 @@ install_os() {
     echo "================================================="
     echo "Choose a CDN:"
     echo "1. wansaw.com  | Fast (Recommended)"
-    echo "2. archive.org | Very Slow but stable"
+    echo "2. sourceforge | MIRRIR IS OFFLINE "
     echo "If exits press retry..."
     echo "================================================="
     read -p "Enter CDN choice (1-2): " cdn_choice
 
     case $cdn_choice in
-        1) cdn="master.dl.sourceforge.net/project/windows-on-cloud";;
-        2) cdn="archive.org/download/windows11-tiny11-cloudvm";;
+        1) cdn="https://windows-on-cloud.wansaw.com/download.aspx?file=";;
+        2) cdn="archive.org/download/windows11-tiny11-cloudvm/";;
         *) echo "Invalid choice. Exiting."; exit 1;;
     esac
     echo "================================================="
@@ -43,7 +43,7 @@ install_os() {
     if [ "$os_version" == "1" ]; then
         lou="Amjid"
         lop="amjiddader"
-        los="win_11.gz?viasf=1"
+        los="l3QmZe4Fo1%2BX3vdSiuLra7z4FPVYMNBiLdl6D67iUXMISfxEcqVyykaCzo%2FoL%2Fjj&expiry=SWYc26JokEFY%2BMgCUCprpg%3D%3D&mac=1d0faa0fff5682bc32d6b714265af179183df8b591b717cc253e1bdfea44d3c9"
         lof="Windows11 (debolted)"
     elif [ "$os_version" == "2" ]; then
         lou="Administrator"
@@ -53,15 +53,15 @@ install_os() {
     else
         lou="Administrator"
         lop="P@ssword64"
-        los="win10_en.gz?viasf=1"
+        los="%2FT0jgNe2WAmZTVs7pM04CyXBTle9Vcp%2FpJSMZReQSNU3A6yecfkffJMP2CL3YNH2&expiry=SWYc26JokEFY%2BMgCUCprpg%3D%3D&mac=da777e8fb6d1b0d2f9f6e48acd61496594910144ebed4ace96359b10d811c9d8"
         lof="Windows10"
     fi
 
     # Install aria2c
     sleep 1 
-    echo "Installing aria2c...."
-    apt update
-    apt install -y aria2
+    #echo "Installing aria2c...."
+    #apt update
+    #apt install -y aria2
 
     # Download OS image
     #mkdir -p /temp
@@ -74,7 +74,6 @@ install_os() {
     echo "If you want to install in another disk or if $primary_disk is not correct disk.."
     echo "Press CTRL+C to exit and Mount your disk then run installer again.."
     echo "Make sure you have mounted your disk already..."
-    echo "If $primary_disk valid and mounted at root / mnt then continue.."
     echo "================================================="
     echo "Continung in 5 secons..............."
     echo "================================================="
@@ -86,11 +85,12 @@ install_os() {
     # Install custom OS using dd and gunzip
     echo "Downloading $lof Now..." 
     echo "================================================="
-    aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
+    #aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
     sleep 1
     echo "================================================="
     echo "Unzipping downloaded file "
-    gunzip -c "windows.gz" | dd of="$primary_disk" bs=4M
+    wget -O- "https://$cdn/$los" | dd of="$primary_disk" bs=4M
+    #gunzip -c "windows.gz" | dd of="$primary_disk" bs=4M
     echo "================================================="
     echo "Removing Junk"
     rm windows.gz *
