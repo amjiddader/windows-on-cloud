@@ -17,7 +17,7 @@ install_os() {
     echo "Choose a CDN:"
     echo "1. wansaw.com  | Fast (Recommended)"
     echo "2. sourceforge | MIRRIR IS OFFLINE "
-    echo "If exits press retry..."
+    echo "Note: If installer exits run agin..."
     echo "================================================="
     read -p "Enter CDN choice (1-2): " cdn_choice
 
@@ -49,12 +49,12 @@ install_os() {
         lou="Administrator"
         lop="Thuonghai001"
         los="c5FIO54kdD6nFpjugqus7IgIDwy2p8UKd0%2FSxfhMT5d3bbE8TUGMPSCVOSf6UF%2BO&expiry=2EPqys8saRDjTvwN2onEDg%3D%3D&mac=a5826d1ad4c17bf54307780a21c0e7c1fc2e30d68a224fdb89f5a888ef0a3305"
-        lof="Windows11"
+        lof="Windows11 Default"
     else
         lou="Administrator"
         lop="P@ssword64"
         los="%2FT0jgNe2WAmZTVs7pM04CyXBTle9Vcp%2FpJSMZReQSNU3A6yecfkffJMP2CL3YNH2&expiry=SWYc26JokEFY%2BMgCUCprpg%3D%3D&mac=da777e8fb6d1b0d2f9f6e48acd61496594910144ebed4ace96359b10d811c9d8"
-        lof="Windows10"
+        lof="Windows10 Default"
     fi
 
     # Install aria2c
@@ -87,26 +87,27 @@ install_os() {
     echo "================================================="
     #aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
     sleep 1
-    echo "================================================="
-    echo "Unzipping downloaded file "
     wget -O- "https://$cdn/$los" | gunzip -c | dd of="$primary_disk" bs=4M status=progress 
+    echo "================================================="
+    # echo "Unzipping downloaded file "
     #gunzip -c "windows.gz" | dd of="$primary_disk" bs=4M
     echo "================================================="
-    echo "Removing Junk"
-    rm windows.gz *
+    echo "Removing Junk if any..."
+    rm *
     #aria2c --file-allocation=none --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
     #curl -L --retry 5 --speed-time 10 -C --parallel-max 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
     #wget -O- "https://$cdn/$los" | gunzip -c |dd of="$primary_disk" bs=4M
-   # wget -O - "url" | gunzip -c | dd of=/dev/vda bs=4M conv=fsync 
+    #wget -O - "url" | gunzip -c | dd of=/dev/vda bs=4M conv=fsync 
 
 
+    echo "================================================="
     echo "Thank you for using the windows-on-cloud installer..."
     sleep 1
     echo "..................."
     echo "..................................."
     echo "..................................................."
     echo "..................................................................."
-    echo "Install $lof but you may need to set up Networking"
+    echo "Installed $lof but you may need to set up Networking"
     echo "Open your browser shell and change your network setting..."
     # Display installed OS info
     sleep 1
