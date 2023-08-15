@@ -1,17 +1,12 @@
 #!/bin/bash
 
-    # Check if OS is supported
-    if [ "$os" != "centos" ] && [ "$os" != "ubuntu" ] && [ "$os" != "debian" ]; then
-        echo "Unsupported OS. Exiting."
-        exit 1
-    fi
-
+echo "Only ubuntu is supported for now..." 
 
 # Function to download and install OS
 install_os() {
     echo "Choose a CDN:"
-    echo "1. wansaw.com | Fast (Recommended)"
-    echo "2. archive.org | Very Slow but stable  "
+    echo "1. wansaw.com  | Fast (Recommended)"
+    echo "2. archive.org | Very Slow but stable"
     read -p "Enter CDN choice (1-2): " cdn_choice
 
     case $cdn_choice in
@@ -60,8 +55,10 @@ install_os() {
 
 
     # Install aria2c
-    $package_manager update
-    $package_manager install -y aria2
+    #$package_manager update
+    #$package_manager install -y aria2
+    apt update
+    apt install -y aria2
 
     # Download OS image
     mkdir -p /temp
