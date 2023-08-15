@@ -65,14 +65,14 @@ install_os() {
     echo "Installing Windows in $primary_disk If you want to install in another disk, you need to install manually.."
     echo "Press CTRL+C to exit.. Or wait Script will continue in 5 seconds." 
     sleep 5
-    if [ -z "$primary_disk" ]; then
+    if [ -z "$primary_disks" ]; then
         read -p "Could not detect the primary disk. Enter disk path where Windows will be installed (e.g., /dev/vda): " primary_disk
     fi
 
     # Install custom OS using dd and gunzip
     #gunzip -c "/temp/windows.gz" | dd of="$primary_disk" bs=4M
     # aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
-    wget -O- 'https://$cdn/$los' | dd of="$primary_disk" bs=4M
+    wget -O- "https://$cdn/$los" | dd of="$primary_disk" bs=4M
 
     echo "Thank you for using the windows-on-cloud installer..."
     echo "Install $lof but you may need to set up Networking"
