@@ -1,6 +1,12 @@
 #!/bin/bash
 
-echo "Only ubuntu is supported for now..."  
+# Check for Ubuntu
+if [ "$os" != "ubuntu" ]; then
+    echo "==================================="
+    echo "Only Ubuntu is supported for now, I will still try"
+    echo "==================================="
+   # exit 1
+fi
 
 # Function to download and install OS
 install_os() {
@@ -15,48 +21,36 @@ install_os() {
         *) echo "Invalid choice. Exiting."; exit 1;;
     esac
 
-    read -p "Choose windows you want to install. \n1.Windows11 x64_en (DeBolted)\n2.Windows11 x64_en\n3.Windows10 x64_en (Buggy)\nChoose your version (1-3): " os_version
+    echo "Choose the Windows version you want to install:"
+    echo "1. Windows11 x64_en (DeBolted)"
+    echo "2. Windows11 x64_en"
+    echo "3. Windows10 x64_en (Buggy)"
+    read -p "Choose your version (1-3): " os_version
 
     if ! [[ "$os_version" =~ ^[1-3]$ ]]; then
         echo "Invalid OS version. Exiting."
         exit 1
     fi
 
-
-    # Determine package manager command
-    if [ "$os" == "centos" ]; then
-        package_manager="yum"
-        username="centos"
-    elif [ "$os" == "ubuntu" ]; then
-        package_manager="apt-get"
-        username="ubuntu"
-    else
-        package_manager="apt-get"
-        username="root"
-    fi
-
-    # get windows logins...
+    # Get Windows logins...
     if [ "$os_version" == "1" ]; then
         lou="Amjid"
         lop="amjiddader"
-	los="win_11.gz?viasf=1"
-	lof="Windows11 (debolted)"
+        los="win_11.gz?viasf=1"
+        lof="Windows11 (debolted)"
     elif [ "$os_version" == "2" ]; then
         lou="Administrator"
         lop="Thuonghai001"
-	los="win11?viasf=1"
-	lof="Windows11"
+        los="win11?viasf=1"
+        lof="Windows11"
     else
         lou="Administrator"
         lop="P@ssword64"
-	los="win10_en.gz?viasf=1"
-	lof="Windows10"
+        los="win10_en.gz?viasf=1"
+        lof="Windows10"
     fi
 
-
     # Install aria2c
-    #$package_manager update
-    #$package_manager install -y aria2
     apt update
     apt install -y aria2
 
@@ -68,28 +62,29 @@ install_os() {
     primary_disk=$(lsblk -no NAME,MOUNTPOINT | awk '$2=="/" {print $1}' | head -n 1)
 
     if [ -z "$primary_disk" ]; then
-        read -p "Could not get hard disk Enter disk path where Windows will be installed (e.g., /dev/vda): " primary_disk
+        read -p "Could not detect the primary disk. Enter disk path where Windows will be installed (e.g., /dev/vda): " primary_disk
     fi
 
     # Install custom OS using dd and gunzip
     gunzip -c "/temp/windows.gz" | dd of="$primary_disk" bs=4M
 
-    echo "Thank you for using windows-on-cloud installer..."
-    echo "Install $lof but you may need to set Networking"
-    echo "Open your browser shell and change your network setting..." 
+    echo "Thank you for using the windows-on-cloud installer..."
+    echo "Install $lof but you may need to set up Networking"
+    echo "Open your browser shell and change your network setting..."
     # Display installed OS info
-    echo "Server Login Information..."
+    echo "Server Login Information:"
     echo "Username: $lou"
     echo "Password: $lop"
     echo "==============="
-    echo "If you have installed windows11 debolted you can also access server with TightVNC"
-    echo "TightVNC Password: amjiddader"
-echo "=============="
-echo "For help check https://github.com/amjiddader/windows-on-cloud" 
-sleep 2 
-
+    if [ "$os_version" == "1" ]; then
+        echo "If you have installed Windows11 debolted, you can also access the server with TightVNC."
+        echo "TightVNC Password: amjiddader"
+    fi
+    echo "=============="
+    echo "For help, check https://github.com/amjiddader/windows-on-cloud"
+    echo "Note: Running scripts from the internet without verifying their content can be risky. Make sure you trust the source before executing."
+    sleep 2
 }
 
 # Main script execution
-choose_option
 install_os
