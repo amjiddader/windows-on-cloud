@@ -77,9 +77,15 @@ This version is extreamly debolted and removed all microsoft apps. \
 - Installed Brave Browser
 - Uninstalled all windows app
 - Uninstalled Edge and other win Softwares
+
+NOTE: After installation it may take few seconds as this is debolted version so microsoft will look for its apps. \
+Also you may not see task bar - Open Brave Browser on desktop and all background processes will exit.
+Setup Network from web console... 
+
 ```
 Username : Amjad 
 Password: amjiddader
+TightVNC PASS: amjiddader
 ```
 
 Downloads
