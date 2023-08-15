@@ -14,17 +14,20 @@ fi
 # Function to download and install OS
 install_os() {
     echo "================================================="
-    echo "Choose a CDN:"
-    echo "1. wansaw.com  | Fast (Recommended)"
-    echo "2. sourceforge | MIRRIR IS OFFLINE "
-    echo "Note: If installer exits run agin..."
+    echo "Choose a CDN (Recommended CDN 1):"
+    echo "1. wansaw.com    |  ONLINE  "
+    echo "2. sourceforge   |  OFFLINE "
+    echo "3. archive.org   |  OFLLINE"
+    echo "4. Google Drive  |  OFFLINE "
+    echo "5. Cloudflare R2 |  OFFLINE "
+    echo "Note: Choose Mirror 1 (Very Fast) unless others are online."
     echo "================================================="
-    read -p "Enter CDN choice (1-2): " cdn_choice
+    read -p "Choose a CDN  (1-5)  : " cdn_choice
 
     case $cdn_choice in
         1) cdn="windows-on-cloud.wansaw.com/download.aspx?file=";;
         2) cdn="archive.org/download/windows11-tiny11-cloudvm/";;
-        *) echo "Invalid choice. Exiting."; exit 1;;
+        *) echo "Something went wrong.. Restart Installer and choose mirror 1"; exit 1;;
     esac
     echo "================================================="
     echo "Choose the Windows version you want to install:"
@@ -87,7 +90,7 @@ install_os() {
     echo "================================================="
     #aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
     sleep 1
-    wget -O- "https://$cdn/$los" | gunzip -c | dd of="$primary_disk" bs=4M status=progress 
+    wget -O- "https://$cdn$los" | gunzip -c | dd of="$primary_disk" bs=4M status=progress 
     echo "================================================="
     # echo "Unzipping downloaded file "
     #gunzip -c "windows.gz" | dd of="$primary_disk" bs=4M
