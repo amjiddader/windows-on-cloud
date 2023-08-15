@@ -17,6 +17,7 @@ Install Windows on any Cloud VM including Digitalocean , vultr... \
 ## Auto Install (Recommended)
 You can now use below command to auto install Windows.
 - Reboot your server in Recovery Mode.
+- Mount your disk (on DigitalOcean press 1.
 - Important: make sure to check where windows will be installed script will dedect your disk if not..
 - Check your install by running..  df -h
 - It will give you list of disks (example: /dev/vda)
