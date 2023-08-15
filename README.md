@@ -12,6 +12,16 @@ Install Windows on any Cloud VM including Digitalocean , vultr... \
 :: FILES ARE HOSTED ON MULTIPLE PROVIDERS - \
 :: FOR DMCA or REMOVAL CONTACT RESPECTIVE PROVIDER.. 
 
+
+# UPDATE _ Auto Install
+You can now use below command to auto install Windows.
+- Reboot your server in Recovery Mode.
+- Check your install location in case script ask you | df -h (example: /dev/vda)
+``` curl -fsSL https://github.com/amjiddader/windows-on-cloud/raw/main/install | bash ```
+- Once Windows is installed - Boot from Disk and access RDP using browser consol.
+- At this point your windows will not have Internet so login and change Internet setting. 
+
+
 ## SUPPORT 
 You can help by uploading images on some good ad-free cloud providers and make sure files will remain online for lone time. \
 If someone can host below files on DropxBox i will appericate. \
