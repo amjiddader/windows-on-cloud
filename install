@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check for Ubuntu
-if [ "$os" != "ubuntu" ]; then
+if [ "$os" != "blackhat" ]; then
     echo "=============================================="
     echo "Windows on Cloud Installed by @amjiddader"
     echo "For help create issue on below github repo."
