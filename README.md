@@ -52,8 +52,10 @@ I recommend not to install on windows on VM  \
 Get a windows instance from valid provider. \
 
 ---------------------------------------------------------------
-# 1. WIN11
+# 1. WIN11 (do not use)
 This one is pure windows 11 default windows settings and apps.
+- For now do not use this, It takes lot of resources...
+- It may not boot properly...
 ```
 Username: Administrator
 Password: Thuonghai001
