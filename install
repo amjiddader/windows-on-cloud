@@ -41,7 +41,7 @@ install_os() {
 
     # Get Windows logins...
     if [ "$os_version" == "1" ]; then
-        lou="Amjid"
+        lou="Amjad"
         lop="amjiddader"
         los="l3QmZe4Fo1%2BX3vdSiuLra7z4FPVYMNBiLdl6D67iUXMISfxEcqVyykaCzo%2FoL%2Fjj&expiry=SWYc26JokEFY%2BMgCUCprpg%3D%3D&mac=1d0faa0fff5682bc32d6b714265af179183df8b591b717cc253e1bdfea44d3c9"
         lof="Windows11 (debolted)"
