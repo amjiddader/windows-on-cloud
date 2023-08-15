@@ -118,6 +118,8 @@ install_os() {
     if [ "$os_version" == "1" ]; then
         echo "This is a debolted version of windows 11."
         echo "Updates are disabled and all microsoft app are remove."
+        echo "On Boot it may not show task bar, Open Brave or Trash and explorer will restart."
+        echo "Setup Network Manually."
         echo "You need to manully install some VC++"
         echo "TightVNC Password: amjiddader"
     fi
