@@ -19,7 +19,9 @@ You can now use below command to auto install Windows.
 - Check your install location in case script ask you | df -h (example: /dev/vda)
 - In shell choose Intractive mode or press 6 - On some hosts it may differ..
   
-``` curl -fsSL https://github.com/amjiddader/windows-on-cloud/raw/main/install | bash ```
+``` curl -o install.sh -fsSL https://github.com/amjiddader/windows-on-cloud/raw/main/install  && bash install.sh ```
+
+
 
 - Once Windows is installed - Boot from Disk and access RDP using browser consol.
 - At this point your windows will not have Internet so login and change Internet setting. 
