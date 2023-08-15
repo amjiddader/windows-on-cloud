@@ -61,7 +61,9 @@ install_os() {
     # Automatically determine primary disk path
     #primary_disk=$(lsblk -no NAME,MOUNTPOINT | awk '$2=="/" {print $1}' | head -n 1)
     primary_disk=$(df -h /mnt | awk 'NR==2 {print $1}')
-
+    echo "Installing Windows in $primary_disk If you want to install in another disk, you need to install manually.."
+    echo "Press CTRL+C to exit.. Or wait Script will continue in 5 seconds." 
+    sleep 5
     if [ -z "$primary_disk" ]; then
         read -p "Could not detect the primary disk. Enter disk path where Windows will be installed (e.g., /dev/vda): " primary_disk
     fi
