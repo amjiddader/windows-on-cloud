@@ -55,12 +55,13 @@ install_os() {
     apt install -y aria2
 
     # Download OS image
-    mkdir -p /temp
+    #mkdir -p /temp
     aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
 
     # Automatically determine primary disk path
     #primary_disk=$(lsblk -no NAME,MOUNTPOINT | awk '$2=="/" {print $1}' | head -n 1)
     primary_disk=$(df -h /mnt | awk 'NR==2 {print $1}')
+
     echo "Installing Windows in $primary_disk If you want to install in another disk, you need to install manually.."
     echo "Press CTRL+C to exit.. Or wait Script will continue in 5 seconds." 
     sleep 5
@@ -80,12 +81,14 @@ install_os() {
     echo "Password: $lop"
     echo "==============="
     if [ "$os_version" == "1" ]; then
-        echo "If you have installed Windows11 debolted, you can also access the server with TightVNC."
+        echo "This is a debolted version of windows 11."
+        echo "Updates are disabled and all microsoft app are remove."
+        echo "You need to manully install some VC++"
         echo "TightVNC Password: amjiddader"
     fi
     echo "=============="
     echo "For help, check https://github.com/amjiddader/windows-on-cloud"
-    echo "Note: Running scripts from the internet without verifying their content can be risky. Make sure you trust the source before executing."
+    echo "Friendly Advice: (this script is clear and unencrypted) But Running scripts from the internet without verifying their content can be risky.. "
     sleep 2
 }
 
