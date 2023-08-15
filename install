@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Function to display menu and get user input
-echo "Install windows on your server"
-echo "For help check https://github.com/amjiddader/windows-on-cloud" 
-sleep 2 
+# Function to display menu and get user inpu
 
 choose_option() {
     echo "Choose your current OS:"
@@ -105,6 +102,9 @@ install_os() {
     echo "==============="
     echo "If you have installed windows11 debolted you can also access server with TightVNC"
     echo "TightVNC Password: amjiddader"
+echo "=============="
+echo "For help check https://github.com/amjiddader/windows-on-cloud" 
+sleep 2 
 
 }
 
