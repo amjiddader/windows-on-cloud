@@ -56,7 +56,7 @@ install_os() {
 
     # Download OS image
     #mkdir -p /temp
-    aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
+    # aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
 
     # Automatically determine primary disk path
     #primary_disk=$(lsblk -no NAME,MOUNTPOINT | awk '$2=="/" {print $1}' | head -n 1)
@@ -70,7 +70,8 @@ install_os() {
     fi
 
     # Install custom OS using dd and gunzip
-    gunzip -c "/temp/windows.gz" | dd of="$primary_disk" bs=4M
+    #gunzip -c "/temp/windows.gz" | dd of="$primary_disk" bs=4M
+    aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
 
     echo "Thank you for using the windows-on-cloud installer..."
     echo "Install $lof but you may need to set up Networking"
