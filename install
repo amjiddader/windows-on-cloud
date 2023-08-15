@@ -6,6 +6,7 @@ if [ "$os" != "blackhat" ]; then
     echo "Windows on Cloud Installed by @amjiddader"
     echo "For help create issue on below github repo."
     echo "https://github.com/amjiddader/windows-on-cloud"
+    echo "Version: github_0.1"
     echo "==============================================="
    # exit 1
 fi
@@ -53,6 +54,8 @@ install_os() {
     fi
 
     # Install aria2c
+    sleep 1 
+    #echo "Installing aria2c...."
     #apt update
     #apt install -y aria2
 
@@ -75,14 +78,23 @@ install_os() {
     fi
 
     # Install custom OS using dd and gunzip
+    echo "Downloading $lof Now..." 
     #gunzip -c "/temp/windows.gz" | dd of="$primary_disk" bs=4M
-    # aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
+    
+    #aria2c --file-allocation=none --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
     wget -O- "https://$cdn/$los" | dd of="$primary_disk" bs=4M
 
     echo "Thank you for using the windows-on-cloud installer..."
+    sleep 1
+    echo "..................."
+    echo "..................................."
+    echo "..................................................."
+    echo "..................................................................."
     echo "Install $lof but you may need to set up Networking"
     echo "Open your browser shell and change your network setting..."
     # Display installed OS info
+    sleep 1
+    echo "================"
     echo "Server Login Information:"
     echo "Username: $lou"
     echo "Password: $lop"
