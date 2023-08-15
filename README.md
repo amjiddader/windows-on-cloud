@@ -13,20 +13,20 @@ Install Windows on any Cloud VM including Digitalocean , vultr... \
 :: FOR DMCA or REMOVAL CONTACT RESPECTIVE PROVIDER.. 
 
 
-# UPDATE _ Auto Install
+# UPDATE 
+## Auto Install (Recommended)
 You can now use below command to auto install Windows.
 - Reboot your server in Recovery Mode.
-- Important: Make sure you have mounted your disk on digitalocean press 1
-- Check your install location in case script ask you | df -h (example: /dev/vda)
+- Important: make sure to check where windows will be installed script will dedect your disk if not..
+- Check your install by running..  df -h
+- It will give you list of disks (example: /dev/vda)
 - In shell choose Intractive mode or press 6 - On some hosts it may differ..
-  
+
 ``` curl -o install.sh -fsSL https://github.com/amjiddader/windows-on-cloud/raw/main/install  && bash install.sh ```
 
-
-
 - Once Windows is installed - Boot from Disk and access RDP using browser consol.
-- At this point your windows will not have Internet so login and change Internet setting. 
-
+- At this point your windows will not have Internet so login and change Internet setting.
+- On Windows 11 debolted , You need to open Brave or Trash on desktop to restart explorer ( on boot task bar is not showing...)
 
 ## SUPPORT 
 You can help by uploading images on some good ad-free cloud providers and make sure files will remain online for lone time. \
