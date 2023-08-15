@@ -56,10 +56,11 @@ install_os() {
 
     # Download OS image
     mkdir -p /temp
-    aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "/temp/windows.gz"
+    aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
 
     # Automatically determine primary disk path
-    primary_disk=$(lsblk -no NAME,MOUNTPOINT | awk '$2=="/" {print $1}' | head -n 1)
+    #primary_disk=$(lsblk -no NAME,MOUNTPOINT | awk '$2=="/" {print $1}' | head -n 1)
+    primary_disk=$(df -h /mnt | awk 'NR==2 {print $1}')
 
     if [ -z "$primary_disk" ]; then
         read -p "Could not detect the primary disk. Enter disk path where Windows will be installed (e.g., /dev/vda): " primary_disk
