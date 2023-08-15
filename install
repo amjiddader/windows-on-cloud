@@ -13,10 +13,12 @@ fi
 
 # Function to download and install OS
 install_os() {
+    echo "================================================="
     echo "Choose a CDN:"
     echo "1. wansaw.com  | Fast (Recommended)"
     echo "2. archive.org | Very Slow but stable"
     echo "If exits press retry..."
+    echo "================================================="
     read -p "Enter CDN choice (1-2): " cdn_choice
 
     case $cdn_choice in
@@ -24,11 +26,12 @@ install_os() {
         2) cdn="archive.org/download/windows11-tiny11-cloudvm";;
         *) echo "Invalid choice. Exiting."; exit 1;;
     esac
-
+    echo "================================================="
     echo "Choose the Windows version you want to install:"
     echo "1. Windows11 x64_en (DeBolted & Light)"
     echo "2. Windows11 x64_en (High CPU Usage)"
     echo "3. Windows10 x64_en (Buggy)"
+    echo "================================================="
     read -p "Choose your version (1-3): " os_version
 
     if ! [[ "$os_version" =~ ^[1-3]$ ]]; then
@@ -62,7 +65,7 @@ install_os() {
 
     # Download OS image
     #mkdir -p /temp
-
+    echo "================================================="
     # Automatically determine primary disk path
     #primary_disk=$(lsblk -no NAME,MOUNTPOINT | awk '$2=="/" {print $1}' | head -n 1)
     primary_disk=$(df -h /mnt | awk 'NR==2 {print $1}')
@@ -72,7 +75,9 @@ install_os() {
     echo "Press CTRL+C to exit and Mount your disk then run installer again.."
     echo "Make sure you have mounted your disk already..."
     echo "If $primary_disk valid and mounted at root / mnt then continue.."
+    echo "================================================="
     echo "Continung in 5 secons..............."
+    echo "================================================="
     sleep 5
     if [ -z "$primary_disk" ]; then
         read -p "Could not detect the primary disk. Enter disk path where Windows will be installed (e.g., /dev/vda): " primary_disk
@@ -80,11 +85,13 @@ install_os() {
 
     # Install custom OS using dd and gunzip
     echo "Downloading $lof Now..." 
+    echo "================================================="
     aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o "windows.gz"
     sleep 1
+    echo "================================================="
     echo "Unzipping downloaded file "
     gunzip -c "windows.gz" | dd of="$primary_disk" bs=4M
-
+    echo "================================================="
     echo "Removing Junk"
     rm windows.gz *
     #aria2c --file-allocation=none --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
@@ -114,6 +121,11 @@ install_os() {
     fi
     echo "=============="
     echo "For help, check https://github.com/amjiddader/windows-on-cloud"
+    echo "Important: Do not reboot. First disable recovery mode"
+    echo "Select Boot From HardDisk"
+    echo "Power OFF and then Power ON & enjoy..."  
+    echo "================================================="
+
     echo "Friendly Advice: (this script is clear and unencrypted) But Running scripts from the internet without verifying their content can be risky.. "
     sleep 2
 }
