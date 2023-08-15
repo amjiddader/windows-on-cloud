@@ -51,8 +51,8 @@ install_os() {
     fi
 
     # Install aria2c
-    apt update
-    apt install -y aria2
+    #apt update
+    #apt install -y aria2
 
     # Download OS image
     #mkdir -p /temp
@@ -71,7 +71,8 @@ install_os() {
 
     # Install custom OS using dd and gunzip
     #gunzip -c "/temp/windows.gz" | dd of="$primary_disk" bs=4M
-    aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
+    # aria2c --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
+    wget -O- 'https://$cdn/$los' | dd of="$primary_disk" bs=4M
 
     echo "Thank you for using the windows-on-cloud installer..."
     echo "Install $lof but you may need to set up Networking"
