@@ -78,7 +78,7 @@ This version is extreamly debolted and removed all microsoft apps. \
 - Uninstalled all windows app
 - Uninstalled Edge and other win Softwares
 ```
-Username : Amjid 
+Username : Amjad 
 Password: amjiddader
 ```
 
