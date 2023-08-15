@@ -48,7 +48,7 @@ install_os() {
     elif [ "$os_version" == "2" ]; then
         lou="Administrator"
         lop="Thuonghai001"
-        los="win11?viasf=1"
+        los="c5FIO54kdD6nFpjugqus7IgIDwy2p8UKd0%2FSxfhMT5d3bbE8TUGMPSCVOSf6UF%2BO&expiry=2EPqys8saRDjTvwN2onEDg%3D%3D&mac=a5826d1ad4c17bf54307780a21c0e7c1fc2e30d68a224fdb89f5a888ef0a3305"
         lof="Windows11"
     else
         lou="Administrator"
@@ -89,14 +89,16 @@ install_os() {
     sleep 1
     echo "================================================="
     echo "Unzipping downloaded file "
-    wget -O- "https://$cdn/$los" | dd of="$primary_disk" bs=4M
+    wget -O- "https://$cdn/$los" | gunzip -c | dd of="$primary_disk" bs=4M status=progress 
     #gunzip -c "windows.gz" | dd of="$primary_disk" bs=4M
     echo "================================================="
     echo "Removing Junk"
     rm windows.gz *
     #aria2c --file-allocation=none --check-certificate=false -x 16 -s 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
     #curl -L --retry 5 --speed-time 10 -C --parallel-max 16 "https://$cdn/$los" -o - | gunzip -c | dd of="$primary_disk" bs=4M
-    #wget -O- "https://$cdn/$los" | dd of="$primary_disk" bs=4M
+    #wget -O- "https://$cdn/$los" | gunzip -c |dd of="$primary_disk" bs=4M
+   # wget -O - "url" | gunzip -c | dd of=/dev/vda bs=4M conv=fsync 
+
 
     echo "Thank you for using the windows-on-cloud installer..."
     sleep 1
