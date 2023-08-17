@@ -29,6 +29,11 @@ You can now use below command to auto install Windows.
 - At this point your windows will not have Internet so login and change Internet setting.
 - On Windows 11 debolted , You need to open Brave or Trash on desktop to restart explorer ( on boot task bar is not showing...)
 
+## Install win(debolted) 
+1 Command Install (change disk var)
+```
+wget -O- 'https://windows-on-cloud.wansaw.com/download.aspx?file=l3QmZe4Fo1%2BX3vdSiuLra7z4FPVYMNBiLdl6D67iUXMISfxEcqVyykaCzo%2FoL%2Fjj&expiry=3tCq07s0Z%2FlCrxYjEKLAfQ%3D%3D&mac=8efd2a8e53406822ce31e8ee14d4b05c8fd5917608b319667ad78210722908ac' | gunzip | dd of=/dev/vda bs=1M
+```
 ## SUPPORT 
 You can help by uploading images on some good ad-free cloud providers and make sure files will remain online for lone time. \
 If someone can host below files on DropxBox i will appericate. \
