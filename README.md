@@ -14,7 +14,13 @@ Install Windows on any Cloud VM including Digitalocean , vultr... \
 
 
 # UPDATE 
-## Auto Install (Recommended)
+
+## Install win(debolted)  (Recommended)
+1 Command Install (change disk var)
+```
+wget -O- 'https://bit.ly/win11-on-cloud_gz' | gunzip | dd of=/dev/vda bs=4M
+```
+## Auto Install 
 You can now use below command to auto install Windows.
 - Reboot your server in Recovery Mode.
 - Mount your disk (on DigitalOcean press 1.
@@ -29,11 +35,7 @@ You can now use below command to auto install Windows.
 - At this point your windows will not have Internet so login and change Internet setting.
 - On Windows 11 debolted , You need to open Brave or Trash on desktop to restart explorer ( on boot task bar is not showing...)
 
-## Install win(debolted) 
-1 Command Install (change disk var)
-```
-wget -O- 'https://bit.ly/win11-on-cloud_gz' | gunzip | dd of=/dev/vda bs=4M
-```
+
 ## SUPPORT 
 You can help by uploading images on some good ad-free cloud providers and make sure files will remain online for lone time. \
 If someone can host below files on DropxBox i will appericate. \
