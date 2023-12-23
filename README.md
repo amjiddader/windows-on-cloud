@@ -15,6 +15,10 @@ Install Windows on any Cloud VM including Digitalocean , vultr... \
 
 # UPDATE 
 ## New Mirror: https://windows-on-cloud.wansaw.com
+Also if your provider supports you can install from ISO
+```
+wget -O- 'https://releases.ubuntu.com/20.04.6/ubuntu-20.04.6-desktop-amd64.iso' |  dd of=/dev/vda bs=4M status=progress
+```
 ### Install win(debolted)  (Recommended)
 1 Command Install (change disk var)
 ```
