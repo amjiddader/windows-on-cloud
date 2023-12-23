@@ -14,8 +14,8 @@ Install Windows on any Cloud VM including Digitalocean , vultr... \
 
 
 # UPDATE 
-
-## Install win(debolted)  (Recommended)
+## New Mirror: https://windows-on-cloud.wansaw.com
+### Install win(debolted)  (Recommended)
 1 Command Install (change disk var)
 ```
 wget -O- 'https://bit.ly/win11-on-cloud_gz' | gunzip | dd of=/dev/vda bs=4M
