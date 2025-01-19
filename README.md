@@ -5,6 +5,8 @@
 
 # Windows on Cloud.
 
+>> Not maintainging anymore..
+
 Install Windows on any Cloud VM including Digitalocean , vultr... \
 3 files are included with different versions and size. choose one based on your needs.
 
