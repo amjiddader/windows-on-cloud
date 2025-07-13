@@ -147,7 +147,8 @@ MIRROR: https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10
 
 # 4. Windows11 Tiny [(by Diep)](https://github.com/diepnt90)
 Provided by [Diep](https://github.com/diepnt90) \
-_I have not tested this myself so try on your_
+_I have not tested this myself so try on your_ \
+For more details [read this issue ](https://github.com/amjiddader/windows-on-cloud/issues/9#issuecomment-3067028142)
 
 ```
 Username: DiepNguyen
