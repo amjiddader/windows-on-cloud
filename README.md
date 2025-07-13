@@ -77,7 +77,11 @@ This one is pure windows 11 default windows settings and apps.
 Username: Administrator
 Password: Thuonghai001
 ```
-Download Links
+Download Links (FAST MIRROR)
+```
+https://windows-on-cloud.wansaw.com/0:/win11
+```
+Alternative Mirrors
 ```
 https://archive.org/download/windows11-tiny11-cloudvm/win11
 https://master.dl.sourceforge.net/project/windows-on-cloud/win11?viasf=1
@@ -107,8 +111,13 @@ Username : Amjad
 Password: amjiddader
 TightVNC PASS: amjiddader
 ```
+Download Links (FAST MIRROR)
+```
+https://windows-on-cloud.wansaw.com/0:/win_11_ami.gz
+```
 
-Downloads
+
+Alternative Links
 ```
 https://archive.org/download/windows11-tiny11-cloudvm/win_11.gz
 https://master.dl.sourceforge.net/project/windows-on-cloud/win_11.gz?viasf=1
@@ -124,13 +133,31 @@ This is just a copy of whatuptime ... credits to them.
 Username : Administrator
 Password: P@ssword64
 ```
-
-Downloads
+Download Link (FAST MIRROR)
+```
+https://windows-on-cloud.wansaw.com/0:/win10_en.gz
+```
+Alternative Mirros.
 ```
 https://archive.org/download/windows11-tiny11-cloudvm/win10_en.gz
 https://master.dl.sourceforge.net/project/windows-on-cloud/win10_en.gz?viasf=1
 ```
 MIRROR: https://www.multiup.org/en/mirror/97dc02190298a64454e556b4579e8781/win10_en.gz
+
+
+# 4. Windows11 Tiny [(by Diep)](https://github.com/diepnt90)
+Provided by [Diep](https://github.com/diepnt90) 
+_I have not tested this myself so try on your_
+
+```
+Username: DiepNguyen
+Password: 431990
+```
+
+Download Link (10GB)
+```
+https://windows-on-cloud.wansaw.com/0:/win11_tiny.gz
+```
 
 ------------------------
 ## Installation
